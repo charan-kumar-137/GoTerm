@@ -22,9 +22,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editText = findViewById(R.id.editText);
         button = findViewById(R.id.button);
 
+
         editText.setHint("Enter the command");
         textView.setText("Welcome to Goterm\n");
         textView.append("Type \'help\' for help");
+
+
         button.setOnClickListener(this);
     }
     private void inputfun(String s){
@@ -49,13 +52,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-            try{
-                str = editText.getText().toString();
-                inputfun(str);
-                editText.setText("");
-            }
-            catch (Exception e){
 
-            }
+        try{
+            str = editText.getText().toString();
+            inputfun(str);
+            editText.setText("");
+        }
+        catch (Exception e){
+
+        }
+
+
     }
 }

@@ -4,13 +4,5 @@
         android:color="#000000"
 
         />
-    <stroke
-        android:width="5dp"
-        android:color="#00FF00"/>
-    <padding
-        android:top="0dp"
-        android:bottom="0dp"
-        android:left="5dp"
-        android:right="5dp"
-        />
+    
 </shape>

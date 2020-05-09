@@ -7,70 +7,49 @@
     android:background="#9FFFFFFF"
     tools:context=".MainActivity">
 
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/leftguideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="40dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/rightguideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="40dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/topguideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/bottomguideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="20dp" />
-
     <TextView
         android:id="@+id/textview"
         android:layout_width="0dp"
-        android:layout_height="500dp"
+        android:layout_height="0dp"
         android:background="@drawable/border"
-        android:textColor="#00FF00"
         android:gravity="bottom"
-        android:paddingBottom="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/rightguideline"
-        app:layout_constraintStart_toStartOf="@+id/leftguideline"
-        app:layout_constraintTop_toTopOf="@+id/topguideline" />
+        android:textColor="#00FF00"
+
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="40dp" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:inputType="text"
         android:background="@drawable/border"
+        android:inputType="text"
         android:textColor="#00FF00"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/rightguideline"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/leftguideline"
-        app:layout_constraintTop_toBottomOf="@+id/textview" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button"
+        android:layout_height="40dp"
         android:background="@drawable/border"
+        android:text="@string/button"
         android:textColor="#00FF00"
-        app:layout_constraintBottom_toTopOf="@+id/bottomguideline"
-        app:layout_constraintEnd_toStartOf="@+id/rightguideline"
-        app:layout_constraintStart_toStartOf="@+id/leftguideline"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
